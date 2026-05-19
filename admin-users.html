@@ -16,9 +16,10 @@
 </head>
 <body class="bg-gray-50 flex h-screen overflow-hidden text-gray-800">
 
+    <!-- Sidebar -->
     <aside class="w-64 bg-[#0f172a] text-white flex flex-col justify-between flex-shrink-0 z-10 shadow-xl">
         <div>
-            
+            <!-- Logo -->
             <div class="p-6 border-b border-slate-800">
                 <div class="flex items-center space-x-2">
                     <svg class="w-6 h-6 text-blue-500" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 14l9-5-9-5-9 5 9 5z"></path><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 14l6.16-3.422a12.083 12.083 0 01.665 6.479A11.952 11.952 0 0012 20.055a11.952 11.952 0 00-6.824-2.998 12.078 12.078 0 01.665-6.479L12 14z"></path></svg>
@@ -29,6 +30,7 @@
                 </div>
             </div>
             
+            <!-- Navigation -->
             <nav class="p-4 space-y-2">
                 <a href="admin-dashboard.html" class="flex items-center space-x-3 text-slate-300 hover:bg-slate-800 hover:text-white px-4 py-3 rounded-lg font-medium transition">
                     <svg class="w-5 h-5 opacity-70" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6a2 2 0 012-2h2a2 2 0 012 2v2a2 2 0 01-2 2H6a2 2 0 01-2-2V6zM14 6a2 2 0 012-2h2a2 2 0 012 2v2a2 2 0 01-2 2h-2a2 2 0 01-2-2V6zM4 16a2 2 0 012-2h2a2 2 0 012 2v2a2 2 0 01-2 2H6a2 2 0 01-2-2v-2zM14 16a2 2 0 012-2h2a2 2 0 012 2v2a2 2 0 01-2 2h-2a2 2 0 01-2-2v-2z"></path></svg>
@@ -60,8 +62,10 @@
         </div>
     </aside>
 
+    <!-- Main Content -->
     <main class="flex-1 overflow-y-auto p-10 bg-gray-50">
         
+        <!-- Header -->
         <header class="mb-8 flex justify-between items-end">
             <div>
                 <h1 class="text-3xl font-bold text-gray-900 mb-2">User Management</h1>
@@ -73,21 +77,26 @@
             </button>
         </header>
 
+        <!-- Main Card Container -->
         <div class="bg-white rounded-2xl border border-gray-200 shadow-sm overflow-hidden mb-10">
             
+            <!-- Tabs Header -->
             <div class="border-b border-gray-100 p-6 pb-0">
                 <div class="bg-gray-50 p-1.5 rounded-xl inline-flex mb-6 border border-gray-100">
-                    <button class="bg-white text-gray-900 font-bold px-5 py-2 rounded-lg shadow-sm text-sm transition">Employees</button>
-                    <button class="text-gray-500 font-medium px-5 py-2 rounded-lg text-sm hover:text-gray-900 transition">HR Managers</button>
-                    <button class="text-gray-500 font-medium px-5 py-2 rounded-lg text-sm hover:text-gray-900 transition">Trainers</button>
-                </div>
-
-                <div class="mb-6">
-                    <h2 class="text-xl font-bold text-gray-900 mb-1">Pending Employee Registrations</h2>
-                    <p class="text-sm text-gray-500">Review and approve employee access requests</p>
+                    <button id="tab-employees" onclick="switchTab('employees')" class="bg-white text-gray-900 font-bold px-5 py-2 rounded-lg shadow-sm text-sm transition">Employees</button>
+                    <button id="tab-hr" onclick="switchTab('hr')" class="text-gray-500 font-medium px-5 py-2 rounded-lg text-sm hover:text-gray-900 transition">HR Managers</button>
+                    <button id="tab-trainers" onclick="switchTab('trainers')" class="text-gray-500 font-medium px-5 py-2 rounded-lg text-sm hover:text-gray-900 transition">Trainers</button>
                 </div>
             </div>
 
+            <!-- EMPLOYEES SECTION -->
+            <div id="section-employees" class="block">
+                <div class="px-6 py-4">
+                    <h2 class="text-xl font-bold text-gray-900 mb-1">Pending Employee Registrations</h2>
+                    <p class="text-sm text-gray-500">Review and approve employee access requests</p>
+                </div>
+
+            <!-- Users Table -->
             <div class="overflow-x-auto">
                 <table class="w-full text-left min-w-[1000px]">
                     <thead>
@@ -102,6 +111,7 @@
                     </thead>
                     <tbody class="text-sm text-gray-700">
                         
+                        <!-- Row 1: Alex Johnson -->
                         <tr class="border-b border-gray-100 hover:bg-gray-50 transition">
                             <td class="py-4 px-6 text-center">
                                 <div class="w-10 h-10 rounded-full bg-blue-100 text-blue-600 font-bold flex items-center justify-center mx-auto text-sm">AJ</div>
@@ -126,6 +136,7 @@
                             </td>
                         </tr>
 
+                        <!-- Row 2: Emma Davis -->
                         <tr class="border-b border-gray-100 hover:bg-gray-50 transition">
                             <td class="py-4 px-6 text-center">
                                 <div class="w-10 h-10 rounded-full bg-blue-100 text-blue-600 font-bold flex items-center justify-center mx-auto text-sm">ED</div>
@@ -150,6 +161,7 @@
                             </td>
                         </tr>
 
+                        <!-- Row 3: Ryan Miller -->
                         <tr class="border-b border-gray-100 hover:bg-gray-50 transition">
                             <td class="py-4 px-6 text-center">
                                 <div class="w-10 h-10 rounded-full bg-blue-100 text-blue-600 font-bold flex items-center justify-center mx-auto text-sm">RM</div>
@@ -174,6 +186,7 @@
                             </td>
                         </tr>
 
+                        <!-- Row 4: Sophia Lee -->
                         <tr class="border-b border-gray-100 hover:bg-gray-50 transition">
                             <td class="py-4 px-6 text-center">
                                 <div class="w-10 h-10 rounded-full bg-blue-100 text-blue-600 font-bold flex items-center justify-center mx-auto text-sm">SL</div>
@@ -198,6 +211,7 @@
                             </td>
                         </tr>
 
+                        <!-- Row 5: Michael Chen -->
                         <tr class="hover:bg-gray-50 transition">
                             <td class="py-4 px-6 text-center">
                                 <div class="w-10 h-10 rounded-full bg-blue-100 text-blue-600 font-bold flex items-center justify-center mx-auto text-sm">MC</div>
@@ -226,6 +240,7 @@
                 </table>
             </div>
             
+            <!-- Pagination / Footer (Optional for UI completeness) -->
             <div class="px-6 py-4 border-t border-gray-100 bg-gray-50 flex items-center justify-between">
                 <span class="text-sm text-gray-500">Showing 5 of 24 pending registrations</span>
                 <div class="flex space-x-1">
@@ -236,10 +251,149 @@
                     <button class="px-3 py-1 bg-white border border-gray-200 hover:bg-gray-50 rounded text-sm text-gray-700 shadow-sm">Next</button>
                 </div>
             </div>
+            </div> <!-- End of Employees Section -->
+
+            <!-- HR MANAGERS SECTION -->
+            <div id="section-hr" class="hidden">
+                <div class="px-6 py-4 border-b border-gray-100">
+                    <div class="flex justify-between items-center">
+                        <div>
+                            <h2 class="text-xl font-bold text-gray-900 mb-1">HR Managers</h2>
+                            <p class="text-sm text-gray-500">Manage human resources personnel</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="overflow-x-auto">
+                    <table class="w-full text-left min-w-[1000px]">
+                        <thead>
+                            <tr class="text-xs font-bold text-gray-900 border-y border-gray-100 bg-gray-50/50">
+                                <th class="py-4 px-6 w-16 text-center">Avatar</th>
+                                <th class="py-4 px-6">Name</th>
+                                <th class="py-4 px-6">Email</th>
+                                <th class="py-4 px-6">Department</th>
+                                <th class="py-4 px-6">Status</th>
+                                <th class="py-4 px-6 text-right">Actions</th>
+                            </tr>
+                        </thead>
+                        <tbody class="text-sm text-gray-700">
+                            <!-- HR Row 1 -->
+                            <tr class="border-b border-gray-100 hover:bg-gray-50 transition">
+                                <td class="py-4 px-6 text-center">
+                                    <div class="w-10 h-10 rounded-full bg-purple-100 text-purple-600 font-bold flex items-center justify-center mx-auto text-sm">SJ</div>
+                                </td>
+                                <td class="py-4 px-6 font-bold text-gray-900">Sarah Jenkins</td>
+                                <td class="py-4 px-6 text-gray-500">sarah.j@company.com</td>
+                                <td class="py-4 px-6 text-gray-500 font-medium">Talent Acquisition</td>
+                                <td class="py-4 px-6">
+                                    <span class="bg-green-50 border border-green-200 text-green-700 font-bold px-3 py-1 rounded-md text-xs shadow-sm">Active</span>
+                                </td>
+                                <td class="py-4 px-6">
+                                    <div class="flex justify-end space-x-2">
+                                        <button class="bg-white hover:bg-gray-50 border border-gray-200 text-gray-700 px-4 py-1.5 rounded-lg text-sm font-bold shadow-sm transition">Edit</button>
+                                        <button class="bg-white hover:bg-red-50 border border-red-200 text-red-500 px-4 py-1.5 rounded-lg text-sm font-bold shadow-sm transition">Suspend</button>
+                                    </div>
+                                </td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+
+            <!-- TRAINERS SECTION -->
+            <div id="section-trainers" class="hidden">
+                <div class="px-6 py-4 border-b border-gray-100">
+                    <div class="flex justify-between items-center">
+                        <div>
+                            <h2 class="text-xl font-bold text-gray-900 mb-1">Trainers</h2>
+                            <p class="text-sm text-gray-500">Manage course instructors and trainers</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="overflow-x-auto">
+                    <table class="w-full text-left min-w-[1000px]">
+                        <thead>
+                            <tr class="text-xs font-bold text-gray-900 border-y border-gray-100 bg-gray-50/50">
+                                <th class="py-4 px-6 w-16 text-center">Avatar</th>
+                                <th class="py-4 px-6">Name</th>
+                                <th class="py-4 px-6">Email</th>
+                                <th class="py-4 px-6">Expertise</th>
+                                <th class="py-4 px-6">Status</th>
+                                <th class="py-4 px-6 text-right">Actions</th>
+                            </tr>
+                        </thead>
+                        <tbody class="text-sm text-gray-700">
+                            <!-- Trainer Row 1 -->
+                            <tr class="border-b border-gray-100 hover:bg-gray-50 transition">
+                                <td class="py-4 px-6 text-center">
+                                    <div class="w-10 h-10 rounded-full bg-orange-100 text-orange-600 font-bold flex items-center justify-center mx-auto text-sm">MR</div>
+                                </td>
+                                <td class="py-4 px-6 font-bold text-gray-900">Marcus Reed</td>
+                                <td class="py-4 px-6 text-gray-500">m.reed@company.com</td>
+                                <td class="py-4 px-6 text-gray-500 font-medium">Leadership, Management</td>
+                                <td class="py-4 px-6">
+                                    <span class="bg-green-50 border border-green-200 text-green-700 font-bold px-3 py-1 rounded-md text-xs shadow-sm">Active</span>
+                                </td>
+                                <td class="py-4 px-6">
+                                    <div class="flex justify-end space-x-2">
+                                        <button class="bg-white hover:bg-gray-50 border border-gray-200 text-gray-700 px-4 py-1.5 rounded-lg text-sm font-bold shadow-sm transition">Edit</button>
+                                        <button class="bg-white hover:bg-red-50 border border-red-200 text-red-500 px-4 py-1.5 rounded-lg text-sm font-bold shadow-sm transition">Suspend</button>
+                                    </div>
+                                </td>
+                            </tr>
+                            <!-- Trainer Row 2 -->
+                            <tr class="border-b border-gray-100 hover:bg-gray-50 transition">
+                                <td class="py-4 px-6 text-center">
+                                    <div class="w-10 h-10 rounded-full bg-orange-100 text-orange-600 font-bold flex items-center justify-center mx-auto text-sm">LT</div>
+                                </td>
+                                <td class="py-4 px-6 font-bold text-gray-900">Laura Torres</td>
+                                <td class="py-4 px-6 text-gray-500">l.torres@company.com</td>
+                                <td class="py-4 px-6 text-gray-500 font-medium">Technical Skills, IT</td>
+                                <td class="py-4 px-6">
+                                    <span class="bg-yellow-50 border border-yellow-200 text-yellow-700 font-bold px-3 py-1 rounded-md text-xs shadow-sm">On Leave</span>
+                                </td>
+                                <td class="py-4 px-6">
+                                    <div class="flex justify-end space-x-2">
+                                        <button class="bg-white hover:bg-gray-50 border border-gray-200 text-gray-700 px-4 py-1.5 rounded-lg text-sm font-bold shadow-sm transition">Edit</button>
+                                        <button class="bg-white hover:bg-red-50 border border-red-200 text-red-500 px-4 py-1.5 rounded-lg text-sm font-bold shadow-sm transition">Suspend</button>
+                                    </div>
+                                </td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
 
         </div>
 
     </main>
 
+    <script>
+        function switchTab(tabId) {
+            // Hide all sections
+            document.getElementById('section-employees').classList.add('hidden');
+            document.getElementById('section-employees').classList.remove('block');
+            
+            document.getElementById('section-hr').classList.add('hidden');
+            document.getElementById('section-hr').classList.remove('block');
+            
+            document.getElementById('section-trainers').classList.add('hidden');
+            document.getElementById('section-trainers').classList.remove('block');
+
+            // Reset all tabs to inactive state
+            const tabs = ['tab-employees', 'tab-hr', 'tab-trainers'];
+            tabs.forEach(tab => {
+                const el = document.getElementById(tab);
+                el.className = 'text-gray-500 font-medium px-5 py-2 rounded-lg text-sm hover:text-gray-900 transition';
+            });
+
+            // Show selected section
+            document.getElementById('section-' + tabId).classList.remove('hidden');
+            document.getElementById('section-' + tabId).classList.add('block');
+
+            // Set active state for selected tab
+            const activeTab = document.getElementById('tab-' + tabId);
+            activeTab.className = 'bg-white text-gray-900 font-bold px-5 py-2 rounded-lg shadow-sm text-sm transition';
+        }
+    </script>
 </body>
 </html>

@@ -16,9 +16,10 @@
 </head>
 <body class="bg-gray-50 flex h-screen overflow-hidden text-gray-800">
 
-    
+    <!-- Sidebar -->
     <aside class="w-64 bg-white border-r border-gray-200 flex flex-col justify-between flex-shrink-0">
         <div>
+            <!-- Logo -->
             <div class="p-6 border-b border-gray-100">
                 <div class="flex items-center space-x-2">
                     <svg class="w-6 h-6 text-blue-600" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 14l9-5-9-5-9 5 9 5z"></path><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 14l6.16-3.422a12.083 12.083 0 01.665 6.479A11.952 11.952 0 0012 20.055a11.952 11.952 0 00-6.824-2.998 12.078 12.078 0 01.665-6.479L12 14z"></path></svg>
@@ -29,6 +30,7 @@
                 </div>
             </div>
             
+            <!-- Navigation -->
             <nav class="p-4 space-y-2">
                 <a href="employee-portal.html" class="flex items-center space-x-3 text-gray-600 hover:bg-gray-50 hover:text-blue-600 px-4 py-3 rounded-lg font-medium transition">
                     <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6a2 2 0 012-2h2a2 2 0 012 2v2a2 2 0 01-2 2H6a2 2 0 01-2-2V6zM14 6a2 2 0 012-2h2a2 2 0 012 2v2a2 2 0 01-2 2h-2a2 2 0 01-2-2V6zM4 16a2 2 0 012-2h2a2 2 0 012 2v2a2 2 0 01-2 2H6a2 2 0 01-2-2v-2zM14 16a2 2 0 012-2h2a2 2 0 012 2v2a2 2 0 01-2 2h-2a2 2 0 01-2-2v-2z"></path></svg>
@@ -56,14 +58,15 @@
         </div>
     </aside>
 
-                
+    <!-- Main Content -->
     <main class="flex-1 overflow-y-auto p-10">
+        <!-- Header -->
         <header class="mb-10">
             <h1 class="text-3xl font-bold text-gray-900 mb-2">My Courses</h1>
             <p class="text-gray-500">Continue your learning journey and track your progress</p>
         </header>
 
-       
+        <!-- Summary Cards -->
         <div class="grid grid-cols-1 md:grid-cols-4 gap-6 mb-8">
             <div class="bg-white rounded-2xl shadow-sm border border-gray-100 p-6 flex flex-col justify-center h-28">
                 <p class="text-sm font-medium text-gray-500 mb-2">Total Courses</p>
@@ -83,6 +86,7 @@
             </div>
         </div>
 
+        <!-- Filter -->
         <div class="bg-white rounded-2xl shadow-sm border border-gray-100 p-5 mb-10 flex flex-col md:flex-row items-start md:items-center justify-between">
             <div class="flex items-center space-x-2 text-gray-700 font-semibold mb-4 md:mb-0">
                 <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 4a1 1 0 011-1h16a1 1 0 011 1v2.586a1 1 0 01-.293.707l-6.414 6.414a1 1 0 00-.293.707V17l-4 4v-6.586a1 1 0 00-.293-.707L3.293 7.293A1 1 0 013 6.586V4z"></path></svg>
@@ -96,9 +100,10 @@
             </div>
         </div>
 
-       
+        <!-- Course Cards Grid -->
         <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
             
+            <!-- In Progress 1 -->
             <div class="bg-white rounded-2xl shadow-sm border border-gray-100 overflow-hidden flex flex-col hover:shadow-md transition">
                 <div class="relative h-48">
                     <img src="https://images.unsplash.com/photo-1552664730-d307ca884978?auto=format&fit=crop&q=80&w=800&h=500" alt="Leadership" class="w-full h-full object-cover">
@@ -129,12 +134,13 @@
                         <span>Due: Apr 15, 2026</span>
                     </div>
                     
-                    <button class="w-full bg-blue-600 hover:bg-blue-700 text-white font-semibold py-2.5 rounded-xl transition text-sm flex items-center justify-center shadow-sm">
+                    <a href="employee-course-view.html" class="w-full bg-blue-600 hover:bg-blue-700 text-white font-semibold py-2.5 rounded-xl transition text-sm flex items-center justify-center shadow-sm">
                         Continue Module <svg class="w-4 h-4 ml-1.5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"></path></svg>
-                    </button>
+                    </a>
                 </div>
             </div>
 
+            <!-- In Progress 2 -->
             <div class="bg-white rounded-2xl shadow-sm border border-gray-100 overflow-hidden flex flex-col hover:shadow-md transition">
                 <div class="relative h-48">
                     <img src="https://images.unsplash.com/photo-1542744173-8e7e53415bb0?auto=format&fit=crop&q=80&w=800&h=500" alt="Communication" class="w-full h-full object-cover">
@@ -165,12 +171,13 @@
                         <span>Due: Apr 22, 2026</span>
                     </div>
                     
-                    <button class="w-full bg-blue-600 hover:bg-blue-700 text-white font-semibold py-2.5 rounded-xl transition text-sm flex items-center justify-center shadow-sm">
+                    <a href="employee-course-view.html" class="w-full bg-blue-600 hover:bg-blue-700 text-white font-semibold py-2.5 rounded-xl transition text-sm flex items-center justify-center shadow-sm">
                         Continue Module <svg class="w-4 h-4 ml-1.5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"></path></svg>
-                    </button>
+                    </a>
                 </div>
             </div>
 
+            <!-- In Progress 3 -->
             <div class="bg-white rounded-2xl shadow-sm border border-gray-100 overflow-hidden flex flex-col hover:shadow-md transition">
                 <div class="relative h-48">
                     <img src="https://images.unsplash.com/photo-1522071820081-009f0129c71c?auto=format&fit=crop&q=80&w=800&h=500" alt="Project Management" class="w-full h-full object-cover">
@@ -201,12 +208,13 @@
                         <span>Due: Apr 10, 2026</span>
                     </div>
                     
-                    <button class="w-full bg-blue-600 hover:bg-blue-700 text-white font-semibold py-2.5 rounded-xl transition text-sm flex items-center justify-center shadow-sm">
+                    <a href="employee-course-view.html" class="w-full bg-blue-600 hover:bg-blue-700 text-white font-semibold py-2.5 rounded-xl transition text-sm flex items-center justify-center shadow-sm">
                         Continue Module <svg class="w-4 h-4 ml-1.5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"></path></svg>
-                    </button>
+                    </a>
                 </div>
             </div>
 
+            <!-- Completed 1 -->
             <div class="bg-white rounded-2xl shadow-sm border border-gray-100 overflow-hidden flex flex-col hover:shadow-md transition">
                 <div class="relative h-48">
                     <img src="https://images.unsplash.com/photo-1551288049-bebda4e38f71?auto=format&fit=crop&q=80&w=800&h=500" alt="Data Analytics" class="w-full h-full object-cover">
@@ -237,12 +245,13 @@
                         <span>Due: Mar 30, 2026</span>
                     </div>
                     
-                    <button class="w-full bg-teal-600 hover:bg-teal-700 text-white font-semibold py-2.5 rounded-xl transition text-sm flex items-center justify-center shadow-sm">
+                    <a href="employee-course-view.html" class="w-full bg-teal-600 hover:bg-teal-700 text-white font-semibold py-2.5 rounded-xl transition text-sm flex items-center justify-center shadow-sm">
                         Revisit Content <svg class="w-4 h-4 ml-1.5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"></path></svg>
-                    </button>
+                    </a>
                 </div>
             </div>
 
+            <!-- Completed 2 -->
             <div class="bg-white rounded-2xl shadow-sm border border-gray-100 overflow-hidden flex flex-col hover:shadow-md transition">
                 <div class="relative h-48">
                     <img src="https://images.unsplash.com/photo-1517048676732-d65bc937f952?auto=format&fit=crop&q=80&w=800&h=500" alt="Professional Development" class="w-full h-full object-cover">
@@ -273,12 +282,13 @@
                         <span>Due: Mar 20, 2026</span>
                     </div>
                     
-                    <button class="w-full bg-teal-600 hover:bg-teal-700 text-white font-semibold py-2.5 rounded-xl transition text-sm flex items-center justify-center shadow-sm">
+                    <a href="employee-course-view.html" class="w-full bg-teal-600 hover:bg-teal-700 text-white font-semibold py-2.5 rounded-xl transition text-sm flex items-center justify-center shadow-sm">
                         Revisit Content <svg class="w-4 h-4 ml-1.5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"></path></svg>
-                    </button>
+                    </a>
                 </div>
             </div>
 
+            <!-- Overdue -->
             <div class="bg-white rounded-2xl shadow-sm border border-gray-100 overflow-hidden flex flex-col hover:shadow-md transition">
                 <div class="relative h-48">
                     <img src="https://images.unsplash.com/photo-1580983546050-a92c42b10959?auto=format&fit=crop&q=80&w=800&h=500" alt="Technical Skills" class="w-full h-full object-cover">
@@ -309,9 +319,9 @@
                         <span class="text-red-600">Due: Apr 01, 2026</span>
                     </div>
                     
-                    <button class="w-full bg-red-600 hover:bg-red-700 text-white font-semibold py-2.5 rounded-xl transition text-sm flex items-center justify-center shadow-sm">
+                    <a href="employee-course-view.html" class="w-full bg-red-600 hover:bg-red-700 text-white font-semibold py-2.5 rounded-xl transition text-sm flex items-center justify-center shadow-sm">
                         Resume Now <svg class="w-4 h-4 ml-1.5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"></path></svg>
-                    </button>
+                    </a>
                 </div>
             </div>
 
